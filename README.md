@@ -1,6 +1,8 @@
 # Article:
 A. Khan and P. Maji, "Low-Rank Joint Subspace Construction for Cancer Subtype Discovery," in *IEEE/ACM Transactions on Computational Biology and Bioinformatics*.
+
 doi: 10.1109/TCBB.2019.2894635
+
 URL: http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8624406&isnumber=4359833
 
 
@@ -15,13 +17,13 @@ install.pacakges("e1071")
 For execution of the C program for the algorithm 
 Input File format is as follows:
 ```c
-        Samples=  #the number of samples
-        Modalities=  #the number of modalities
-        Cluster= #the number of clusters
-        File1= #Filename for Modality1  				 Features= #Number of features in Modality1    				  logtransform= 1 for log transformation 0 for if not
-        File2= #Filename for Modality2  				 Features= #Number of features in Modality2    				  logtransform= 1 for log transformation 0 for if not
-        File3= #Filename for Modality3  				 Features= #Number of features in Modality3  				  logtransform= 1 for log transformation 0 for if not
-        File4= #Filename for Modality4  				 Features= #Number of features in Modality4 	 		      logtransform= 1 for log transformation 0 for if not
+		Samples=  #the number of samples
+		Modalities=  #the number of modalities
+		Cluster= #the number of clusters
+		File1= #Filename for Modality1		Features= #Number of features in Modality1		logtransform= 1 for log transformation 0 for if not
+		File2= #Filename for Modality2		Features= #Number of features in Modality2		logtransform= 1 for log transformation 0 for if not
+		File3= #Filename for Modality3		Features= #Number of features in Modality3		logtransform= 1 for log transformation 0 for if not
+		File4= #Filename for Modality4		Features= #Number of features in Modality4		logtransform= 1 for log transformation 0 for if not
 ```
 
 
@@ -30,10 +32,10 @@ Input File format is as follows:
 Samples= 398
 Modalities= 4
 Cluster= 4
-File1= DataSets/BRCA/mDNA  					Features= 2000		logtransform= 0
-File2= DataSets/BRCA/RNA      					Features= 2000		logtransform= 1
-File3= DataSets/BRCA/miRNA 					Features= 278		  logtransform= 1
-File4= DataSets/BRCA/RPPA 						Features= 212		 logtransform= 0
+File1= DataSets/BRCA/mDNA  		Features= 2000		logtransform= 0
+File2= DataSets/BRCA/RNA      	Features= 2000		logtransform= 1
+File3= DataSets/BRCA/miRNA 		Features= 278		logtransform= 1
+File4= DataSets/BRCA/RPPA 		Features= 212		logtransform= 0
 ```
 
 
