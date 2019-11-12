@@ -1,0 +1,7 @@
+Samples= 124
+Modalities= 4
+Cluster= 3
+File1= DataSets/CESC/mDNA      Features= 2000	logtransform= 0
+File2= DataSets/CESC/RNA       Features= 2000	logtransform= 1
+File3= DataSets/CESC/miRNA     Features= 311	logtransform= 1
+File4= DataSets/CESC/RPPA      Features= 219	logtransform= 0

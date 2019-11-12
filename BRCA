@@ -1,0 +1,7 @@
+Samples= 398
+Modalities= 4
+Cluster= 4
+File1= DataSets/BRCA/mDNA      Features= 2000	logtransform= 0
+File2= DataSets/BRCA/RNA       Features= 2000	logtransform= 1
+File3= DataSets/BRCA/miRNA     Features= 278	logtransform= 1
+File4= DataSets/BRCA/RPPA      Features= 212	logtransform= 0
