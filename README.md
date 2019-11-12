@@ -20,10 +20,10 @@ Input File format is as follows:
 Samples=  #the number of samples
 Modalities=  #the number of modalities
 Cluster= #the number of clusters
-File1= #Filename for Modality1		Features= #Number of features in Modality1		logtransform= 1 for log transformation 0 for if not
-File2= #Filename for Modality2		Features= #Number of features in Modality2		logtransform= 1 for log transformation 0 for if not
-File3= #Filename for Modality3		Features= #Number of features in Modality3		logtransform= 1 for log transformation 0 for if not
-File4= #Filename for Modality4		Features= #Number of features in Modality4		logtransform= 1 for log transformation 0 for if not
+File1= #Filename for Modality1	Features= #Number of features in Modality1	logtransform= 1 for log transformation 0 for if not
+File2= #Filename for Modality2	Features= #Number of features in Modality2	logtransform= 1 for log transformation 0 for if not
+File3= #Filename for Modality3	Features= #Number of features in Modality3	logtransform= 1 for log transformation 0 for if not
+File4= #Filename for Modality4	Features= #Number of features in Modality4	logtransform= 1 for log transformation 0 for if not
 ```
 
 
@@ -32,10 +32,10 @@ File4= #Filename for Modality4		Features= #Number of features in Modality4		logt
 Samples= 398
 Modalities= 4
 Cluster= 4
-File1= DataSets/BRCA/mDNA  		Features= 2000		logtransform= 0
-File2= DataSets/BRCA/RNA      	Features= 2000		logtransform= 1
-File3= DataSets/BRCA/miRNA 		Features= 278		logtransform= 1
-File4= DataSets/BRCA/RPPA 		Features= 212		logtransform= 0
+File1= DataSets/BRCA/mDNA		Features= 2000		logtransform= 0
+File2= DataSets/BRCA/RNA		Features= 2000		logtransform= 1
+File3= DataSets/BRCA/miRNA		Features= 278		logtransform= 1
+File4= DataSets/BRCA/RPPA		Features= 212		logtransform= 0
 ```
 
 
@@ -83,10 +83,10 @@ Example call:
 
 ```r
 Data<-list()
-Data[[1]] <- as.matrix(read.table("DataSets/BRCA/mDNA", sep=" ",header=TRUE,row.names=1))
-Data[[2]] <- as.matrix(read.table("DataSets/BRCA/RNA", sep=" ",header=TRUE,row.names=1))
-Data[[3]] <- as.matrix(read.table("DataSets/BRCA/miRNA", sep=" ",header=TRUE,row.names=1))
-Data[[4]] <- as.matrix(read.table("DataSets/BRCA/RPPA", sep=" ",header=TRUE,row.names=1))
+Data[[1]] <- as.matrix(read.table(paste0("DataSets/BRCA/mDNA",n),sep=" ",header=TRUE,row.names=1))
+Data[[2]] <- as.matrix(read.table(paste0("DataSets/BRCA/RNA",n),sep=" ",header=TRUE,row.names=1))
+Data[[3]] <- as.matrix(read.table(paste0("DataSets/BRCA/miRNA",n),sep=" ",header=TRUE,row.names=1))
+Data[[4]] <- as.matrix(read.table(paste0("DataSets/BRCA/RPPA",n),sep=" ",header=TRUE,row.names=1))
 mod=c("mDNA","RNA","miRNA","RPPA")
 source("Normality.R")
 out=Normality(Data,mod)
