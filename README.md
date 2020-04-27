@@ -48,22 +48,22 @@ gcc Normality.c -lm -llapack
 ```
 
 
-R code for the **breast cancer (BRCA) dataset** is given in *BRCAExample.R* file.
+R code for the breast cancer (BRCA) data set is given in ``BRCAExample.R`` file.
 To execute R code go to R environment and execute in command line:
 
 >source("BRCAExample.R")
 
-The R code for the **cervical cancer (CESC) dataset** is given in *CESCExample.R* file. To run this file in the R terminal execute
+The R code for the cervical cancer (CESC) dataset is given in ``CESCExample.R`` file. To run this file within the R terminal execute
 >source("CESCExample.R")
 
 
-Joint subspace is written to file : JointSubspace.txt
-JointSubspace.txt contains a (n x r) where n is the number of samples in the data set and r is  the rank of the joint subspace.
+Joint subspace is written to file : ``JointSubspace.txt``
+JointSubspace.txt contains a ``(n x r)`` where ``n`` is the number of samples in the data set and ``r`` is  the rank of the joint subspace.
 
-The cluster assignments are written to the file BRCA-ClusterAssignment.txt for the BRCA data set and in file CESC-ClusterAssignment.txt for the CESC data set.
+The cluster assignments are written to the file ``BRCA-ClusterAssignment.txt`` for the BRCA data set and in file ``CESC-ClusterAssignment.txt`` for the CESC data set.
 
 
-The file *Normality.R* contains the R implementation of the proposed method as a function `Normality`. 
+The file ``Normality.R`` contains the R implementation of the proposed method as a function `Normality`. 
 Details of the fuctions is as follows:
 
 Proposed Method Function Name: `Normality`
@@ -73,11 +73,10 @@ Proposed Method Function Name: `Normality`
 
 
 Arguments
-*DataL*:  A list object containing M data matrices representing *M* different omic data types measured in a set of n samples. 
-For each matrix, the rows represent samples, and the columns represent genomic features.
+``DataL``:  A list object containing ``M`` data matrices representing ``M`` different omic data types measured in a set of ``n`` samples. For each matrix, the rows represent samples, and the columns represent genomic features.
 
-*mod*: A string array of names of the modalities. Required for modality selection.
-Example: *mod=c("mDNA","RNA","miRNA","RPPA")*
+``mod``: A string array of names of the modalities. Required for modality selection.
+Example: ``mod=c("mDNA","RNA","miRNA","RPPA")``
 
 Example call:
 
