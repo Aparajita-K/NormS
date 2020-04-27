@@ -25,8 +25,6 @@ File2= #Filename for Modality2    Features= #Number of features in Modality2    
 File3= #Filename for Modality3    Features= #Number of features in Modality3    logtransform= 1 for log transformation 0 for if not
 File4= #Filename for Modality4    Features= #Number of features in Modality4    logtransform= 1 for log transformation 0 for if not
 ```
-
-
 ###### Example Input File (for BRCA dataset):
 ```c
 Samples= 398
@@ -37,16 +35,11 @@ File2= DataSets/BRCA/RNA		Features= 2000		logtransform= 1
 File3= DataSets/BRCA/miRNA		Features= 278		logtransform= 1
 File4= DataSets/BRCA/RPPA		Features= 212		logtransform= 0
 ```
-
-
-
-
 After installing the R packages, execute C version of code by 
 ```shell
 gcc Normality.c -lm -llapack
 ./a.out BRCA			#Input File name as command line argument
 ```
-
 
 R code for the breast cancer (BRCA) data set is given in ``BRCAExample.R`` file.
 To execute R code go to R environment and execute in command line:
@@ -56,12 +49,10 @@ To execute R code go to R environment and execute in command line:
 The R code for the cervical cancer (CESC) dataset is given in ``CESCExample.R`` file. To run this file within the R terminal execute
 >source("CESCExample.R")
 
-
 Joint subspace is written to file : ``JointSubspace.txt``
 JointSubspace.txt contains a ``(n x r)`` where ``n`` is the number of samples in the data set and ``r`` is  the rank of the joint subspace.
 
 The cluster assignments are written to the file ``BRCA-ClusterAssignment.txt`` for the BRCA data set and in file ``CESC-ClusterAssignment.txt`` for the CESC data set.
-
 
 The file ``Normality.R`` contains the R implementation of the proposed method as a function `Normality`. 
 Details of the fuctions is as follows:
@@ -71,8 +62,8 @@ Proposed Method Function Name: `Normality`
 ###### Usage 
 `Normality(DataL, mod)`
 
-
 Arguments
+
 ``DataL``:  A list object containing ``M`` data matrices representing ``M`` different omic data types measured in a set of ``n`` samples. For each matrix, the rows represent samples, and the columns represent genomic features.
 
 ``mod``: A string array of names of the modalities. Required for modality selection.
